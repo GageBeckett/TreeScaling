@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-/*	// write your code here
+	// write your code here
         Scanner in = new Scanner (System.in);
-        TheList link = new TheList();
+        /*TheList link = new TheList();
         String[] purple = new String[20];
         String temp ="";
         System.out.println("Tree Scaling. Numerical values only, type 'n' to exit input");
@@ -24,10 +24,19 @@ public class Main {
 
 
         link.main(purple);*/
-        BinaryTree tree = new BinaryTree( 20 );
-        int[] nums = {15, 200, 25, -5, 0, 100, 20, 12, 126, 1000, -150};
-        for(int i : nums ) {
-            tree.addNode( i );
+        int root;
+        System.out.println("Input root node");
+        root = in.nextInt();
+        BinaryTree tree = new BinaryTree(root);
+        int num;
+        while(true) {
+            System.out.println("Input Leaf");
+            num = in.nextInt();
+            if(num == 0){
+                break;
+            }else{
+                tree.addNode( num );
+            }
         }
         System.out.println("Pre Order");
         tree.traversePreOrder();

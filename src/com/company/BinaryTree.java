@@ -11,9 +11,7 @@ public class BinaryTree {
         this.left = null;
         this.right = null;
     }
-    // As a convention, if the key to be inserted is less than the key of root node, then key is inserted in
-// left sub-tree; If key is greater, it is inserted in right sub-tree. If it is equal, as a convention, it
-// is inserted in right sub-tree
+
     public void addNode(int num) {
         if (num < this.data) {
             if (this.left != null) {
