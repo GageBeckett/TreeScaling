@@ -30,34 +30,64 @@ public class BinaryTree {
         }
     }
     // Visit the node first, then left and right sub-trees
-    public void traversePreOrder() {
-        System.out.println( this.data );
+    //VLR
+    public void VLR() {
+        System.out.print( this.data + ", " );
         if( this.left != null ) {
-            this.left.traversePreOrder();
+            this.left.VLR();
         }
         if( this.right != null ) {
-            this.right.traversePreOrder();
+            this.right.VLR();
+        }
+    }
+    public void VRL() {
+        System.out.print( this.data + ", " );
+        if( this.right != null ) {
+            this.right.VRL();
+        }
+        if( this.left != null ) {
+            this.left.VRL();
         }
     }
     // Visit left sub-tree, then node and then, right sub-tree
-    public void traverseInOrder() {
+    //LVR
+    public void LVR() {
         if( this.left != null ) {
-            this.left.traverseInOrder();
+            this.left.LVR();
         }
-        System.out.println( this.data );
+        System.out.print( this.data + ", " );
         if( this.right != null ) {
-            this.right.traverseInOrder();
+            this.right.LVR();
+        }
+    }
+    public void RVL(){
+        if(this.right!=null){
+            this.right.RVL();
+        }
+        System.out.print(this.data + ", ");
+        if(this.left != null){
+            this.left.RVL();
         }
     }
     // Visit left sub-tree, then right sub-tree and then the node
-    public void traversePostOrder() {
+    //LRV
+    public void LRV() {
         if( this.left != null ) {
-            this.left.traversePostOrder();
+            this.left.LRV();
         }
         if( this.right != null ) {
-            this.right.traversePostOrder();
+            this.right.LRV();
         }
-        System.out.println( this.data );
+        System.out.print( this.data + ", " );
+    }
+    public void RLV() {
+        if( this.right != null ) {
+            this.right.RLV();
+        }
+        if( this.left != null ) {
+            this.left.RLV();
+        }
+        System.out.print( this.data + ", " );
     }
 
 }

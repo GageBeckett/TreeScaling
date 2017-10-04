@@ -1,5 +1,6 @@
 package com.company;
 
+import java.awt.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -38,12 +39,25 @@ public class Main {
                 tree.addNode( num );
             }
         }
-        System.out.println("Pre Order");
-        tree.traversePreOrder();
-        System.out.println("In Order");
-        tree.traverseInOrder();
-        System.out.println("Post Order");
-        tree.traversePostOrder();
+        System.out.println("LVR");
+        tree.LVR();
+        System.out.println("");
+        System.out.println("RVL");
+        tree.RVL();
+        System.out.println("");
+        System.out.println("VLR");
+        tree.VLR();
+        System.out.println("");
+        System.out.println("VRL");
+        tree.VRL();
+        System.out.println("");
+        System.out.println("LRV");
+        tree.LRV();
+        System.out.println("");
+        System.out.println("RLV");
+        tree.RLV();
+
+
     }
 
     private String[] clean(String[] purple){
