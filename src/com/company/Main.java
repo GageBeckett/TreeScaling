@@ -31,7 +31,7 @@ public class Main {
         BinaryTree tree = new BinaryTree(root);
         int num;
         while(true) {
-            System.out.println("Input Leaf");
+            System.out.println("Input Leaf, 0 to exit");
             num = in.nextInt();
             if(num == 0){
                 break;
@@ -39,22 +39,22 @@ public class Main {
                 tree.addNode( num );
             }
         }
-        System.out.println("LVR");
+        System.out.print("LVR-> ");
         tree.LVR();
         System.out.println("");
-        System.out.println("RVL");
+        System.out.print("RVL-> ");
         tree.RVL();
         System.out.println("");
-        System.out.println("VLR");
+        System.out.print("VLR-> ");
         tree.VLR();
         System.out.println("");
-        System.out.println("VRL");
+        System.out.print("VRL-> ");
         tree.VRL();
         System.out.println("");
-        System.out.println("LRV");
+        System.out.print("LRV-> ");
         tree.LRV();
         System.out.println("");
-        System.out.println("RLV");
+        System.out.print("RLV-> ");
         tree.RLV();
 
 
